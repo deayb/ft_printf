@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: denayoub <denayoub@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/09 20:20:08 by denayoub          #+#    #+#             */
+/*   Updated: 2025/12/09 20:26:04 by denayoub         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PRINTF_H
+# define LIBFT_H
+
+#include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int	ft_putnbr(int nb);
+int	ft_putunbr(unsigned int nb);
+int	ft_putchar(int c);
+int	ft_putstr(char *str);
+int	ft_printf(const char *s, ...);
+
+#endif
