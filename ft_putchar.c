@@ -6,7 +6,7 @@
 /*   By: denayoub <denayoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 20:23:03 by denayoub          #+#    #+#             */
-/*   Updated: 2025/12/09 20:23:32 by denayoub         ###   ########.fr       */
+/*   Updated: 2025/12/12 21:49:15 by denayoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_putchar(int c)
 {
 	write (1, &c, 1);
-	return (c);
+	return (1);
 }

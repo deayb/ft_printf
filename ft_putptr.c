@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denayoub <denayoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 20:23:50 by denayoub          #+#    #+#             */
-/*   Updated: 2025/12/12 22:05:55 by denayoub         ###   ########.fr       */
+/*   Created: 2025/12/12 21:19:50 by denayoub          #+#    #+#             */
+/*   Updated: 2025/12/12 22:06:10 by denayoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ft_putptr(void *ptr)
 {
-	int	i;
+	unsigned long	address;
+	int				len;
 
-	if (!str)
-		return (write(1, "(null)", 6));
-	i = 0;
-	while (str[i])
-	{
-		write (1, &str[i], 1);
-		i++;
-	}
-	return (i);
+	address = (unsigned long)ptr;
+	len = 0;
+	if (ptr == NULL)
+		return (ft_putstr("(nil)"));
+	len += write(1, "0x", 2);
+	len += ft_putnbr_hexa(address, 'x');
+	return (len);
 }
