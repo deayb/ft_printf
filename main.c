@@ -32,6 +32,5 @@ int	main(void)
 	ft_printf("====================\n\nft_printf: %p\n", &x);
 	printf("prinft: %p", &x);
 	return (0);
-	
 }
 
